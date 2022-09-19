@@ -1,0 +1,20 @@
+{
+  "name": "missing-await-demo",
+  "version": "1.0.0",
+  "description": "Demonstartion for Missing Await talk",
+  "main": "index.js",
+  "scripts": {
+    "build": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.0.3",
+    "jest": "^29.0.3",
+    "typescript": "^4.8.3",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1"
+  }
+}
