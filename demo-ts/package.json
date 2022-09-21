@@ -4,7 +4,7 @@
   "description": "Demonstartion for Missing Await talk",
   "main": "index.js",
   "scripts": {
-    "build": "eslint . && tsc",
+    "build": "eslint ./src && tsc",
     "test": "jest"
   },
   "author": "",

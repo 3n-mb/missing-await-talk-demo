@@ -6,10 +6,14 @@ async function bar(): Promise<number> {
 	throw 42;
 }
 
-foo();
-try {
-	bar();
-} catch (err) {
-	baz();
-	console.log(err);
+
+export async function main(): Promise<void> {
+	foo();
+	try {
+		bar();
+	} catch (err) {
+		baz();
+		console.log(err);
+	}
 }
+
