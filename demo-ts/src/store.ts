@@ -17,5 +17,4 @@ export async function incrementCounterInFile(file: string): Promise<number> {
 		writeFile(file, JSON.stringify(initCounterValue));
 		return initCounterValue;
 	}
-	
 }
