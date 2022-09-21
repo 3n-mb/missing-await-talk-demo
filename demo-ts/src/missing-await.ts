@@ -2,7 +2,7 @@
 declare function foo(): void;
 declare function baz(): void;
 
-async function bar(): Promise<number> {
+export async function bar(): Promise<number> {
 	throw 42;
 }
 

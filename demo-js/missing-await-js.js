@@ -3,7 +3,7 @@ function foo() {
 }
 
 function baz() {
-	console.log(`foo`);
+	console.log(`baz`);
 }
 
 async function bar() {
