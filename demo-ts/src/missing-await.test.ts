@@ -1,5 +1,10 @@
 import { bar } from "./missing-await"
 
-test(`bar() throws`, () => {
-	expect(bar()).toThrow();
+test(`bar() throws`, async () => {
+	try {
+		await bar();
+		fail(`should throw`);
+	} catch (err) {
+		expect(err).toBeDefined();
+	}
 });

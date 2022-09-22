@@ -12,9 +12,9 @@ afterEach(async () => {
 });
 
 test(`incrementCounterInFile() has orderly counter`, async () => {
-	const counts: Promise<number>[] = [];
+	const counts: number[] = [];
 	for (let i=1; i<=10; i+=1) {
-		counts.push(incrementCounterInFile(counterFile));
+		counts.push(await incrementCounterInFile(counterFile));
 	}
 	for (let i=1; i<=10; i+=1) {
 		expect(await Promise.all(counts)).toContain(i);

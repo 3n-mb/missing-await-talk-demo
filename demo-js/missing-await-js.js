@@ -10,14 +10,16 @@ async function bar() {
 	throw 42;
 }
 
-function main() {
+async function main() {
 	foo();
 	try {
-		bar();
+		await bar();
 	} catch (err) {
 		baz();
 		console.log(err);
 	}
 }
 
-main();
+main().catch(() => {
+	// eslint-disable no-empty
+});

@@ -10,7 +10,7 @@ export async function bar(): Promise<number> {
 export async function main(): Promise<void> {
 	foo();
 	try {
-		bar();
+		await bar();
 	} catch (err) {
 		baz();
 		console.log(err);

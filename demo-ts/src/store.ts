@@ -4,7 +4,7 @@ type FileExc = Error & { code: string; };
 
 export async function incrementCounterInFile(file: string): Promise<number> {
 	try {
-		const str = readFile(file, { encoding: 'utf8' });
+		const str = await readFile(file, { encoding: 'utf8' });
 		let counter = JSON.parse(str);
 		counter += 1;
 		await writeFile(file, JSON.stringify(counter));
@@ -14,7 +14,7 @@ export async function incrementCounterInFile(file: string): Promise<number> {
 			throw err;
 		}
 		const initCounterValue = 1;
-		writeFile(file, JSON.stringify(initCounterValue));
+		await writeFile(file, JSON.stringify(initCounterValue));
 		return initCounterValue;
 	}
 }
